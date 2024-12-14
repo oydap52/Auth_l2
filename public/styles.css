@@ -1,0 +1,110 @@
+/* Стили для body и фона */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Занять всю высоту экрана */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Новый шрифт */
+    background-color: #e9ecef; /* Светлый фон для улучшенного контраста */
+}
+
+/* Основные стили контейнера */
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 25px;
+    background-color: #fff;  /* Белый фон */
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Более мягкая тень */
+    text-align: center;
+    border: 2px solid #007bff; /* Добавлен контур для выделения */
+}
+
+/* Стили для заголовков */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff; /* Синий цвет для заголовка */
+    font-weight: 700;
+}
+
+/* Стили для всех форм */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для всех инпутов */
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], select {
+    padding: 10px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 80%;
+    background-color: #f8f9fa; /* Цвет фона полей */
+    transition: border-color 0.3s ease; /* Плавное изменение цвета границы */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #007bff; /* Синий контур при фокусе */
+    outline: none; /* Убираем стандартную обводку */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #28a745; /* Зеленая кнопка */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 55%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Темно-зеленый на ховере */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+/* Стили для ссылок */
+a.button {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    background-color: #17a2b8; /* Голубая кнопка для регистрации */
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 88px;
+    width: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.button:hover {
+    background-color: #138496; /* Темно-синий на ховере */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+/* Анимация контейнера при загрузке */
+.container {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

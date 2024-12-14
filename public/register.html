@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form action="/save" method="POST" onsubmit="return validatePasswords()">
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="birthdate">Дата рождения:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender">
+                <option value="male">Мужчина</option>
+                <option value="female">Женщина</option>
+            </select>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="passwordRepeat">Повторите пароль:</label>
+            <input type="password" id="passwordRepeat" name="passwordRepeat" required>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <a href="login.html" class="button">Уже есть аккаунт? Войти</a>
+    </div>
+
+    <script>
+        // Функция для проверки совпадения паролей
+        function validatePasswords() {
+            const password = document.getElementById("password").value;
+            const passwordRepeat = document.getElementById("passwordRepeat").value;
+
+            if (password !== passwordRepeat) {
+                alert("Пароли не совпадают!");
+                return false; // Останавливает отправку формы
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

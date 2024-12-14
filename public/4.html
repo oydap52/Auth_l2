@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Профиль пользователя</h1>
+        <div>
+            <p><strong>Логин:</strong> <span id="username"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Дата рождения:</strong> <span id="birthdate"></span></p>
+            <p><strong>Пол:</strong> <span id="gender"></span></p>
+            <p><strong>Дата регистрации:</strong> <span id="registrationDate"></span></p>
+        </div>
+        <a href="login.html" class="button">Выйти</a>
+    </div>
+
+    <script>
+        // Получение данных из URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Заполнение данных на страницу
+        document.getElementById('username').textContent = params.get('username') || "Не указано";
+        document.getElementById('email').textContent = params.get('email') || "Не указано";
+        document.getElementById('birthdate').textContent = params.get('birthdate') || "Не указано";
+        document.getElementById('gender').textContent = params.get('gender') || "Не указано";
+        
+        // Преобразование и отображение даты регистрации
+        const registrationDate = params.get('registrationDate');
+        document.getElementById('registrationDate').textContent = registrationDate || "Не указано";
+    </script>
+</body>
+</html>

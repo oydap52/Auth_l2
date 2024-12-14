@@ -1,0 +1,26 @@
+[
+  {
+    "username": "ilya3901",
+    "email": "i.sukhodolskiy3901@gmail.com",
+    "birthdate": "2005-06-30",
+    "gender": "male",
+    "password": "gigantpisun5sm",
+    "registrationDate": "14.12.2024, 17:30"
+  },
+  {
+    "username": "knobik",
+    "email": "knobik123@gmail.com",
+    "birthdate": "2005-04-14",
+    "gender": "male",
+    "password": "123123",
+    "registrationDate": "14.12.2024, 17:31"
+  },
+  {
+    "username": "lepeshok",
+    "email": "lepesh228@gmail.com",
+    "birthdate": "2006-03-18",
+    "gender": "male",
+    "password": "123123123",
+    "registrationDate": "14.12.2024, 17:32"
+  }
+]
